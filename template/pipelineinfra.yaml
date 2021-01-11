@@ -69,7 +69,7 @@
           Project ${SageMakerProjectName}'
       'Code':
         'S3':
-          'Bucket': 'sagemaker-servicecatalog-seedcode-us-west-2'
+          'Bucket': 'pv-sagemaker-pipeline-seedcode-customer-churn-us-west-2'
           'Key': 'toolchain/model-building-workflow-v1.0.zip'
   'SageMakerModelPipelineBuildProject':
     'Type': 'AWS::CodeBuild::Project'
@@ -258,7 +258,7 @@
           ${SageMakerProjectName}'
       'Code':
         'S3':
-          'Bucket': 'sagemaker-servicecatalog-seedcode-us-west-2'
+          'Bucket': 'pv-sagemaker-pipeline-seedcode-customer-churn-us-west-2'
           'Key': 'toolchain/mpg-deployment-config-v1.0.zip'
   'ModelDeployBuildProject':
     'Type': 'AWS::CodeBuild::Project'
