@@ -123,7 +123,7 @@ def get_pipeline(
     )
     input_data = ParameterString(
         name="InputDataUrl",
-        default_value=f"s3://sm-pipelines-demo-data-123456789/churn.txt",  # Change this to point to the s3 location of your raw input data.
+        default_value=f"s3://sagemaker-us-west-2-325928439752/sagemaker/DEMO-xgboost-churn/data/RawData.csv",  # Change this to point to the s3 location of your raw input data.
     )
 
     # Processing step for feature engineering
