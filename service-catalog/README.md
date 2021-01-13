@@ -1,6 +1,6 @@
 # Create Custom SageMaker Project Template 
 
-In this lab, we will create custom SageMaker project template using the AWS Service Catalog.
+In this lab, we will create a custom SageMaker project template using the AWS Service Catalog.
 
 To create a custom project template, complete the following steps.
 
@@ -99,7 +99,7 @@ In the "Repositories" tab, click on "clone repo" under "Local path". This will a
 
 ![project-repo-clone](../img/project_repo_clone.png)
 
-In order for the pipeline to be successful, we will need to provide the correct location of the data by updating the "default_value" of the input_data ParameterString inside the ``` pipelines/customer_churn/pipeline.py``` file. This will kick of a new pipeline run. 
+In order for the pipeline execution to be successful, we will need to provide the correct location of the data by updating the "default_value" of the input_data ParameterString inside the ``` pipelines/customer_churn/pipeline.py``` file. This will kick of a new pipeline run. 
 
 
 
