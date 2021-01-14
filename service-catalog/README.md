@@ -4,13 +4,24 @@ In this lab, we will create a custom SageMaker project template using the AWS Se
 
 To create a custom project template, complete the following steps.
 
-### <b>Step 1: Create an AWS Service Catalog Portfolio</b>
+### <b>Step 1: Upload seed code to a a S3 bucket and update the template </b>
+
+Create a bucket in the same region as you are running this workshop. Create a "toolchain" folder in the bucket. Upload the following files to that location <br/>
+
+    1. model-building-workflow-customer-churn-v1.0.zip (This file can be found under seed-code/model-building-workflow-customer-churn folder) <br/>
+    
+    2. mpg-deployment-config-customer-churn.zip (This file can be found under seed-code/mpg-deployment-config-customer-churn)
+
+Update S3:Bucket field under ModelBuildCodeCommitRepository and ModelDeployCodeCommitRepository sections in "service-cataglog/sagemaker-project-template-product.yaml" file with the bucket created above.
+
+
+### <b>Step 2: Create an AWS Service Catalog Portfolio</b>
 
 To create a portfolio, click on the "Portfolios" link on the AWS Service Catalog console. Provide the requested details as follows and click "Create"
 
 ![sc-portfolio-create](../img/sc_portfolio_create.png)
 
-### <b>Step 2: Create an AWS Service Catalog Product</b>
+### <b>Step 3: Create an AWS Service Catalog Product</b>
 
 To create a product, click on the portfolio name, In the portfolio details page, click on "Upload new product"
 
@@ -24,7 +35,7 @@ In the version details section, choose the "Use a template file" method and uplo
 
 Click on "Add product to portfolio", select the product and click on "Add Proudct to Portfolio"
 
-### <b>Step 3: Add a Launch Constraint to Assign an IAM Role</b>
+### <b>Step 4: Add a Launch Constraint to Assign an IAM Role</b>
 
 Open the IAM console, In the navigation pane, choose Policies. Choose Create policy and do the following:
 
@@ -78,6 +89,8 @@ On the portfolio details page, choose the Groups, roles, and users tab.
 
 Choose Add groups, roles, users.
 On the Roles tab, search for the "AmazonSageMaker-ExecutionRole" used by either the Studio domain or the user role for studio user. 
+
+### <b>Step 5: SageaMaker Studio : Create Project from Organization Template</b>
 
 Open SageMaker Studio IDE, select "SageMaker Components and registries" icon on the left navigation menu. Select "Projects" from the dropdown and click "Create project". 
 
